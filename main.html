@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.7">
+  <title>Игра "Попади в яйко"</title>
+  <style>
+    #gameArea {
+      width: 340px;
+      height: 340px;
+      border: 0px solid rgb(255, 255, 255);
+      position: relative;
+    }
+    .ball {
+      width: 30px; 
+      height: 30px; 
+      border-radius: 50%;
+      position: absolute;
+    }
+    body {
+        background-color: black 
+    }
+    .title-text {
+        font-family: 'Geologica', sans-serif;
+        color: white
+    }
+    .ad-text {
+        font-family: 'Geologica', sans-serif;
+        color: white
+    }
+    .block-model {
+        background-color: #555555;
+        border: 2px solid #555555;
+        border-radius: 7px;
+        width: 340px;
+        height: 340px;
+    }
+    .button {
+        background-color: #555555;
+        border: 2px solid #242323;
+        border-radius: 1px;
+        width: 70px;
+        height: 22px;
+    }
+</style>
+  </style>
+</head>
+<body>
+  <h1 class="title-text">Игра "Попади в яйко"</h1>
+  <h3  class="title-text">Ниже игровое поле</h3>
+  <div class="block-model">
+    <div id="gameArea"></div>
+  </div>
+  <p></p>
+  <div class="button">
+  <button onclick="startGame()" class="new">🆕</button>
+  <button onclick="stopGame()">🛑</button>
+</div>
+
+  <h2 class="ad-text">Реклама от Aibo The Dog: Aibo's Mod </h2>
+  <iframe frameborder="0" src="https://itch.io/embed/1972577?bg_color=5B00FF&amp;fg_color=ffffff&amp;link_color=f8f4fe&amp;border_color=7a42dd" width="552" height="167"><a href="https://aibo-the-dog.itch.io/aibos-mod">Aibo's Mod by Aibo The Dog</a></iframe>  
+  <script>
+    let gameInterval;
+    const gameArea = document.getElementById('gameArea');
+    let score = 0;
+
+    function createBall() {
+      const ball = document.createElement('div');
+      ball.classList.add('ball');
+      ball.style.backgroundColor = getRandomColor(); 
+      ball.style.left = Math.random() * 310 + 'px'; 
+      ball.style.top = Math.random() * 310 + 'px'; 
+      gameArea.appendChild(ball);
+
+      setTimeout(() => {
+        ball.remove();
+      }, 3000);
+    }
+
+    function shootBall(event) {
+      if (event.target.classList.contains('ball')) {
+        event.target.remove();
+        score++;
+        console.log('Очки: ' + score);
+      }
+    }
+
+    function startGame() {
+      gameInterval = setInterval(createBall, 1000);
+      gameArea.addEventListener('click', shootBall);
+    }
+
+    function stopGame() {
+      clearInterval(gameInterval);
+      gameArea.removeEventListener('click', shootBall);
+      alert('Очки: ' + score);
+    }
+
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+</body>
+</html>
