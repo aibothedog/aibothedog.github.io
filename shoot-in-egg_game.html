@@ -45,10 +45,23 @@
         width: 70px;
         height: 22px;
     }
+    .container {
+        height: 200px;
+        position: relative;
+    }
+    .center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+    }
 </style>
   </style>
 </head>
 <body>
+  <p><button><a href="aibothedog.github.io">Домашняя страница</a></button></p>
   <h1 class="title-text">Игра "Попади в яйко"</h1>
   <h3  class="title-text">Ниже игровое поле</h3>
   <div class="block-model">
@@ -59,10 +72,9 @@
   <button onclick="startGame()" class="new">🆕</button>
   <button onclick="stopGame()">🛑</button>
 </div>
-<p><button><a href="/">Домашняя страница</a></button></p>
 
-  <h2 class="ad-text">Реклама от Aibo The Dog: Aibo's Mod </h2>
-  <iframe frameborder="0" src="https://itch.io/embed/1972577?bg_color=5B00FF&amp;fg_color=ffffff&amp;link_color=f8f4fe&amp;border_color=7a42dd" width="552" height="167"><a href="https://aibo-the-dog.itch.io/aibos-mod">Aibo's Mod by Aibo The Dog</a></iframe>  
+  <h2 class="ad-text" style="text-align: center;">Реклама от Aibo The Dog: Aibo's Mod </h2>
+  <div class="container"><div class=center><iframe frameborder="0" src="https://itch.io/embed/1972577?bg_color=5B00FF&amp;fg_color=ffffff&amp;link_color=f8f4fe&amp;border_color=7a42dd" width="552" height="167"><a href="https://aibo-the-dog.itch.io/aibos-mod">Aibo's Mod by Aibo The Dog</a></iframe></div></div>  
   <script>
     let gameInterval;
     const gameArea = document.getElementById('gameArea');
