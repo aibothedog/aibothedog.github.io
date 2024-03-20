@@ -1,3 +1,5 @@
-Игра "Попади в яйко"
+Мой сайт
 
-Open-Source игра HTML5 написаная с нуля!
+Open-Source игра HTML5 написаная с нуля! - https://aibothedog.github.io/Egg
+
+
