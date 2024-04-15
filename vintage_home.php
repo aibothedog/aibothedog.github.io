@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300&display=swap" rel="stylesheet">
+  <title>Aibo The Dog: Главная страница</title>
+  <link rel="icon" type="image/png" href="Krico 2.0.png">
+  <style>
+    body{
+      background-color: black;
+    }
+    .text{
+      color: white;
+      text-align: center;
+      font-family: 'Geologica', sans-serif;
+    }
+    .container_button {
+      height: 30px;
+      position: relative;
+    }
+    .center_button {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    .container_ad {
+      height: 200px;
+      position: relative;
+    }
+    .center_ad {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+
+<body>
+ <h3 class=text>Приветствую тебя на моем сайте!</h3>
+  <h3 class=text>Тут есть две игры в которые ты можешь поиграть! Нажми на одну из кнопок чтоб поиграть!</h3>
+  <div class=container_button><div class=center_button><p><button><a style="text-decoration: none;" style="color: black;" href=/satan-war>Со мной воюет сатана</a></button></p></div></div>
+  <div class=container_button><div class=center_button><p><button><a style="text-decoration: none;" style="color: black;" href=/shoot-in-egg_game>Попади в яйко</a></button></p></div></div>
+<h2 class=text>Реклама от Aibo The Dog: Aibo's Mod</h2>
+  <div class=container_ad><div class=center_ad><p><iframe frameborder="0" src="https://itch.io/embed/1972577?bg_color=5B00FF&amp;fg_color=ffffff&amp;link_color=f8f4fe&amp;border_color=7a42dd" width="552" height="167"><a href="https://aibo-the-dog.itch.io/aibos-mod">Aibo's Mod by Aibo The Dog</a></iframe>></p>
+  <script src="script.js"></script></div></div>
+</body>
+
+</html>
